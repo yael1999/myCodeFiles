@@ -1,0 +1,152 @@
+#include <stdio.h>
+#include <string.h>
+#include "func.h"
+
+#define size 4
+void showHotelStatus(hotel *h)
+{
+    //room **popo = h->rooms;
+    //room **fp = popo;
+    /*
+    r + 8 -- מצביע לקומה 9 
+    &r[8]
+    *(r+8) -- מצביע לחדר ראשון של קומה 9
+    r[8]
+    *(r+8)+9 -- מצביע לחדר העשירי של קומה 9
+    r[8]+9
+    &r[8][9]
+    *(*(r+8)+9) -- החדר העשיר ממש שוקולדדד
+    r[8][9]
+    */
+    int floorI = 0;
+    int roomI = 0;
+
+    for (room **fp = h->rooms; fp < h->rooms + size; fp++)
+    {
+        roomI = 0;
+        for (room *rp = *fp; rp < *fp + size; rp++)
+        {
+            if (!rp->available)
+                printf("room number %d %d is occupied\n", floorI + 1, roomI + 1);
+            printf("the booker is: %s\n", rp->customerP->customerName);
+            printf("the number of people sleeping in the hotel %d\n", rp->nightGuests);
+            printf("the number of people eating breakfast is %d\n", rp->breakfastGuests);
+            roomI++;
+        }
+        floorI++;
+    }
+}
+
+void addCustomer(customer *cp, int id, char customerName[256], int creditNum[12])
+{
+    id = cp->id;
+    strcpy(customerName, cp->customerName);
+    for (int i = 0; i < 12; i++)
+    {
+        creditNum[i] = cp->creditNum[i];
+    }
+}
+
+void checkIfAvailable(hotel *h)
+{
+}
+int checkIfExist(room[] rooms)
+{
+    room *r = rooms;
+    for (int i = 0; i < size * size; i++)
+    {
+        if (r->available)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void showCustomers(hotel *h)
+{
+    customer c[64] = hotel->customers;
+    int customerNum;
+    int sleepGuests;
+    int breakfastPeople;
+    char *str[256] = {0};
+    str[0] = "The customers are ";
+    for (int i = 0; i < 64; i++)
+    {
+        printf("%d-%s", j, c[i]->customerName);
+    }
+    scanf_s("I choose customer %d", &customerNum);
+    scanf_s("I want %d people staying in the room", &sleepGuests);
+    scanf_s("I want %d people eating breakfast", &breakfastPeople);
+    int numRoom = checkIfExist(h->rooms);
+    if (numRoom >= 0)
+    {
+        h->reservations[numRoom].breakfastPeople = breakfastPeople;
+        h->reservations[numRoom].sleepGuests = sleepGuests;
+    }
+    else
+        printf("No room is available ok?????");
+}
+
+void checkOut(int num, hotel *h)
+{
+    room *r = h->rooms + num;
+    r->available = true;
+}
+
+int main()
+{
+    hotel california;
+    // init customers
+    customer customers[64];
+    // customer 1
+    customer c1;
+    char name1[256];
+    strcpy(name1, "Yinon");
+    int cn1[12] = {0, 0, 0, 3, 5, 2, 7, 9, 8, 6, 3};
+    c1.id = 1;
+    c1.customerName = name1;
+    c1.creditNum = cn1;
+    // customer 2
+    customer c2;
+    char name2[256];
+    strcpy(name2, "Yael");
+    int cn2[12] = {0, 0, 0, 3, 5, 2, 7, 9, 8, 6, 3};
+    c2.id = 2;
+    c2.customerName = name2;
+    c2.creditNum = cn2;
+    // loop over all customers
+    for (int i = 0; i < 64; i++)
+    {
+        if (i < 32)
+            customers[i] = c1;
+        else
+            customers[i] = c2;
+    }
+    california.customers = customers;
+    // init reservations
+    customer reservations[16];
+    reservation res;
+    char date[11] = "20/02/1996";
+    res.breakfastPeople = 4;
+    res.sleepGuests = 2;
+    res.cp = &c;
+    for (int i = 0; i < 16; i++)
+        reservations[i] = res;
+    california.reservations = reservations;
+    // init rooms
+    room rooms[16];
+    room r;
+    r.available = false;
+    r.nightGuests = 2;
+    r.breakfastGuests = 4;
+    customer customers4[4] = {c1, c2, c1, c2};
+    r.customer4 = customers4;
+    for (int i = 0; i < 16; i++)
+        rooms[i] = r;
+    california.rooms = rooms;
+    // run all functions of hotel
+    showHotelStatus(&california);
+    /// die!!!
+    return 0;
+}

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("fu.jpg");
+}
+
+header {
+    background: darkblue;
+    margin: auto;
+    width: 100;
+}
+
+header>h1 {
+    color: white;
+    text-align: center;
+    font-family: asap, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: 200px;
+}
+
+.choise {
+    display: inline-block;
+    text-align: center;
+    border: 3px solid black;
+    padding: 30px;
+    margin: 10px;
+}
+
+.result {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 40px;
+    border: 3px solid darkblue;
+    margin: -165px auto;
+    width: 400px;
+    color: darkblue;
+}
+
+.compMove {
+    color: black;
+    font-weight: bolder;
+    font-size: 40px;
+    border: 3px solid darkblue;
+    margin: -400px 1060px;
+    width: 300px;
+    color: darkblue;
+}

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("sub.jpg");
+}
+
+#header {
+    color: midnightBlue;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#beginButton {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-image: url("sub.jpg");
+}
+
+.border {
+    margin: 70px auto;
+    padding: 20px;
+    border: 5px solid midnightBlue;
+    width: 200;
+}
+
+.chart {
+    margin: 20px auto;
+}
+
+table {
+    margin: 100 auto;
+    border: 3px solid midnightBlue;
+    text-align: center;
+}
+
+.score-board {
+    border: 3px solid midnightBlue;
+    width: 200px;
+    text-align: center;
+    margin: -350 200;
+    font-size: 30px;
+    position: relative;
+}
+
+.badge {
+    background-image: url("blue.jpg");
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#user {
+    position: absolute;
+    top: 6;
+    left: -20;
+}
+
+#comp {
+    position: absolute;
+    top: 6;
+    right: -41;
+}
+
+button {
+    background: midnightBlue;
+    font-size: 16px;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+}

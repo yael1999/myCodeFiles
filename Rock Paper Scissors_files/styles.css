@@ -1,0 +1,55 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background-color:#333366;
+}
+
+header{
+ background-color: white;
+ text-align:center;
+}
+
+header<h1{
+color:#333366;
+
+}
+
+.choises{
+margin:50px 0;
+text-align: center;
+}
+
+.choise{
+margin:0 20px;
+padding:10px;
+display:inline;
+}
+
+
+
+.result{
+color:white;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+.score-board{
+margin:20px auto;
+border:3px solid white;
+text-align:center;
+width:150px;
+color:white;
+font-size:46px;
+padding:5px 10px;
+}
+
+
+
+
+
+

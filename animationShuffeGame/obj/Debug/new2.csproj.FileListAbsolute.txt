@@ -1,0 +1,10 @@
+D:\c#\new2\bin\Debug\new2.exe.config
+D:\c#\new2\bin\Debug\new2.exe
+D:\c#\new2\bin\Debug\new2.pdb
+D:\c#\new2\obj\Debug\new2.csprojAssemblyReference.cache
+D:\c#\new2\obj\Debug\new2.Form1.resources
+D:\c#\new2\obj\Debug\new2.Properties.Resources.resources
+D:\c#\new2\obj\Debug\new2.csproj.GenerateResource.cache
+D:\c#\new2\obj\Debug\new2.csproj.CoreCompileInputs.cache
+D:\c#\new2\obj\Debug\new2.exe
+D:\c#\new2\obj\Debug\new2.pdb
